@@ -1,5 +1,13 @@
 function hasTargetSum(array, target) {
-  // Write your algorithm here
+  obj = {}
+  for (let i = 0; i<array.length; i++) {
+    let comp = target - array[i]
+    if (comp in obj) {
+      return true
+    } else {
+      obj[array[i]] = i
+    }
+  } return false
 }
 
 /* 
